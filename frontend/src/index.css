@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 240 10% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+    --primary: 240 6% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 240 6% 10%;
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 240 5% 90%;
+    --accent-foreground: 240 6% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 6% 10%;
+    --radius: 0.75rem;
+    --sidebar: 240 6% 97%;
+    --sidebar-foreground: 240 10% 4%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-active: 240 5% 90%;
+    --sidebar-active-foreground: 240 6% 10%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 96%;
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 6% 10%;
+    --secondary: 240 6% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 6% 18%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 240 6% 22%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 0 0% 96%;
+    --sidebar: 240 8% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-border: 240 6% 18%;
+    --sidebar-active: 240 6% 18%;
+    --sidebar-active-foreground: 0 0% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Safe area para iOS */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+@layer utilities {
+  .scroll-hide::-webkit-scrollbar { display: none; }
+  .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .beautiful-shadow {
+    box-shadow:
+      0px 0px 0px 1px rgba(0,0,0,0.06),
+      0px 1px 1px -0.5px rgba(0,0,0,0.06),
+      0px 3px 3px -1.5px rgba(0,0,0,0.06),
+      0px 6px 6px -3px rgba(0,0,0,0.06),
+      0px 12px 12px -6px rgba(0,0,0,0.06),
+      0px 24px 24px -12px rgba(0,0,0,0.06);
+  }
+}

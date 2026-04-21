@@ -1,0 +1,13 @@
+fastapi[standard]==0.115.6
+pydantic==2.10.4
+pydantic-settings==2.7.0
+supabase==2.10.0
+agno==1.1.1
+openai==1.58.1
+docling==2.15.0
+pandas==2.2.3
+python-multipart==0.0.20
+python-dotenv==1.0.1
+hashlib2==1.0.0
+httpx==0.28.1
+uvicorn[standard]==0.32.1
